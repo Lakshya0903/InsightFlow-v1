@@ -36,7 +36,7 @@ def plotly_figure_to_png(fig):
     """
     try:
         
-        img_bytes = fig.to_image(format="png", width=800, height=400, scale=2, engine="kaleido")
+        img_bytes = fig.to_image(format="png", width=800, height=400, scale=2)
         return io.BytesIO(img_bytes)
     except Exception as e:
         logger.error(f"Plotly image export failed: {e}", exc_info=True)
